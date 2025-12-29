@@ -1,115 +1,13 @@
-<!DOCTYPE html>
-<html lang="tr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmet Efe Gençel | Oyun Geliştirici</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-
-<body>
-
-    <nav>
-        <div class="container nav-container">
-
-            <ul class="nav-links">
-                <li><a href="#home">Ana Sayfa</a></li>
-                <li><a href="#about">Hakkımda</a></li>
-                <li><a href="#projects">Projem</a></li>
-                <li><a href="#contact">İletişim</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <p class="greeting">Selam, ben</p>
-            <h1 class="name">Ahmet Efe Gençel</h1>
-            <h2 class="title">Oyun Geliştirici</h2>
-            <p class="description">
-                Kendi çapımda oyun geliştirme ile uğraşıyorum
-            </p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn primary-btn">Son Projemi Gör</a>
-                <a href="#contact" class="btn secondary-btn">Tanışalım</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">Hakkımda & Yetenekler</h2>
-            <div class="about-content">
-                <div class="about-text center-text">
-                    <p>Java swing kütüphanesi ile ilk projemi geliştirdim şuanda libGDX ile oyun gelştirmeye devam
-                        ediyorum.
-                        Büyük kod bloklarını yönetmeyi ve proje geliştirme aşamalarında tecrübe ediniyorum
-                    </p>
-
-                    <div class="skills">
-                        <span class="skill-tag"><i class="fa-brands fa-java"></i> Java</span>
-                        <span class="skill-tag"><i class="fas fa-gamepad"></i> libGDX</span>
-                        <span class="skill-tag"><i class="fas fa-sitemap"></i> Algoritma</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section bg-alt">
-        <div class="container">
-            <h2 class="section-title">Öne Çıkan Projem</h2>
-            <div class="projects-wrapper">
-
-                <div class="project-card featured-project">
-                    <div class="project-image">
-                        <img src="FlappyDog.png" alt="Proje Ekran Görüntüsü">
-                    </div>
-                    <div class="card-content">
-                        <h3>FlappyDog</h3>
-                        <p class="project-tech">Kullanılanlar: Java, Swing</p>
-                        <p class="project-desc">
-                            İlk yayınladığım proje olan FlappyDog görüldüğü üzere bir Flappy Bird klonudur.
-                            Kendimi geliştirmek oyun mekaniklerini anlamak için Swing ile geliştirdim.
-                            Lakin bu projemden sonra libGDX ile daha profesyonel projelere geçiyorum.
-                        </p>
-                        <div class="card-links">
-                            <a href="https://github.com/ProGencel/FlappyDog" target="_blank" class="btn-small"><i
-                                    class="fab fa-github"></i> Kaynak Kod</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container contact-container">
-            <h2 class="section-title">İletişime Geç</h2>
-            <p>Yeni fırsatlara ve işbirliklerine açığım.</p>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmetefegencel@gmail.com" target="_blank"
-                class="btn primary-btn email-btn">
-                <i class="fab fa-google"></i> Gmail'den Yaz
-            </a>
-
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/ahmetefegencel/" target="_blank" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/ProGencel" target="_blank" aria-label="GitHub"><i
-                        class="fab fa-github"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Ahmet Efe Gençel. Profesyonel Oyun Geliştirici Portföy.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio-site</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
