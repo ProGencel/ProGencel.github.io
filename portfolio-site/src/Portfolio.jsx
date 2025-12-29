@@ -113,7 +113,7 @@ const Portfolio = () => {
                     <a href="https://www.linkedin.com/in/ahmetefegencel/" target="_blank" rel="noopener noreferrer" className="p-3 bg-stone-800 rounded-full hover:bg-[#0077b5] hover:text-white hover:border-[#0077b5] transition-all border border-stone-700 group">
                         <Linkedin size={24} className="group-hover:scale-110 transition-transform"/>
                     </a>
-                    <a href="ahmetefegencel@gmail.com" className="p-3 bg-stone-800 rounded-full hover:bg-[#E07A5F] hover:text-white hover:border-[#E07A5F] transition-all border border-stone-700 group">
+                    <a href="mailto:ahmetefegencel@gmail.com" className="p-3 bg-stone-800 rounded-full hover:bg-[#E07A5F] hover:text-white hover:border-[#E07A5F] transition-all border border-stone-700 group">
                         <Mail size={24} className="group-hover:scale-110 transition-transform"/>
                     </a>
                 </div>
