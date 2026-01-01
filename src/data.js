@@ -1,18 +1,19 @@
 import flappyImg from './assets/images/FlappyDog.png'
 import recImg from './assets/images/RectangleMachine.png'
+import potatoImg from './assets/images/PotatoChaos.png'
 
 export const games = [
   {
     id: "game1",
-    title: "Rectangle Machine",
-    shortDesc: "A simple Java Swing app based on LeetCode problem 836. It compares two rectangles and checks if they overlap.",
-    coverImage: recImg,
+    title: "Potato Chaos",
+    shortDesc: "Potato Chaos is a game made with libGDX where you can explore surroundings and complete the main quest",
+    coverImage: potatoImg,
     platform: "PC",
-    techStack: ["Java", "Swing"],
-    themeColor: "from-stone-50 to-[#E07A5F]/10",
+    techStack: ["Java", "libGDX"],
+    themeColor: "from-stone-50 to-purple-500/10",
     links: {
-      itch: "",
-      github: "https://github.com"
+      itch: "https://progencel.itch.io/potato-chaos",
+      github: "https://github.com/ProGencel/PotatoChaosGame"
     }
   },
   {
@@ -27,5 +28,18 @@ export const games = [
       itch: "",
       github: "https://github.com/ProGencel/FlappyDog"
     }
-  }
+  },
+  {
+    id: "game3",
+    title: "Rectangle Machine",
+    shortDesc: "A simple Java Swing app based on LeetCode problem 836. It compares two rectangles and checks if they overlap.",
+    coverImage: recImg,
+    platform: "PC",
+    techStack: ["Java", "Swing"],
+    themeColor: "from-stone-50 to-[#E07A5F]/10",
+    links: {
+      itch: "",
+      github: "https://github.com/ProGencel/Rectangle-Machine"
+    }
+  },
 ];

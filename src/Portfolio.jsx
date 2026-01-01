@@ -49,7 +49,7 @@ const Portfolio = () => {
 
   const skills = [
     "Java", "Swing", "LibGDX", "Box2D", 
-    "Git", "Github", "Scene2D", "Aseprite", "Reaper"
+    "Git", "Github", "Scene2D", "OOP",
   ];
 
   return (
@@ -115,6 +115,9 @@ const Portfolio = () => {
                     </a>
                     <a href="mailto:ahmetefegencel@gmail.com" className="p-3 bg-stone-800 rounded-full hover:bg-[#E07A5F] hover:text-white hover:border-[#E07A5F] transition-all border border-stone-700 group">
                         <Mail size={24} className="group-hover:scale-110 transition-transform"/>
+                    </a>
+                    <a href="https://progencel.itch.io/" target="_blank" rel="noopener noreferrer" className="p-3 bg-stone-800 rounded-full hover:bg-[#ff5c5c] hover:text-white hover:border-[#ff5c5c] transition-all border border-stone-700 group">
+                        <Gamepad2 size={24} className="group-hover:scale-110 transition-transform"/>
                     </a>
                 </div>
 
