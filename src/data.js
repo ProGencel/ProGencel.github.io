@@ -25,7 +25,7 @@ export const games = [
     techStack: ["Java", "Swing"],
     themeColor: "from-stone-50 to-purple-500/10",
     links: {
-      itch: "",
+      itch: "https://progencel.itch.io/flappy-dog",
       github: "https://github.com/ProGencel/FlappyDog"
     }
   },
