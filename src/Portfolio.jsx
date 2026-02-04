@@ -6,6 +6,9 @@ import { games } from './data';
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("");
 
+  // Projeleri otomatik olarak ters sıralıyoruz (En yeni en üstte)
+  const reversedGames = [...games].reverse();
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -25,13 +28,14 @@ const Portfolio = () => {
     const heroElement = document.getElementById('hero');
     if (heroElement) observer.observe(heroElement);
 
-    games.forEach((game) => {
+    // Observer artık ters sıralanmış listeyi takip ediyor
+    reversedGames.forEach((game) => {
       const element = document.getElementById(game.id);
       if (element) observer.observe(element);
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [reversedGames]); // reversedGames bağımlılık olarak eklendi
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -40,10 +44,10 @@ const Portfolio = () => {
     }
   };
 
-  // İlk projeye kaydırma fonksiyonu (Ok işareti için)
+  // Hero'daki ok işareti artık listenin başındaki (en yeni) projeye gider
   const scrollToFirstProject = () => {
-    if (games.length > 0) {
-      scrollToSection(games[0].id);
+    if (reversedGames.length > 0) {
+      scrollToSection(reversedGames[0].id);
     }
   };
 
@@ -58,7 +62,7 @@ const Portfolio = () => {
       {/* --- NAVIGATION --- */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-stone-800/90 backdrop-blur-md shadow-lg shadow-black/20 rounded-2xl px-6 py-3 border border-stone-700/50 transition-all duration-300">
         <ul className="flex items-center gap-2 sm:gap-6">
-          {games.map((game) => (
+          {reversedGames.map((game) => (
             <li key={game.id}>
               <button
                 onClick={() => scrollToSection(game.id)}
@@ -84,11 +88,9 @@ const Portfolio = () => {
 
         <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center z-10 pt-20">
             
-            {/* SOL: Metin Alanı */}
             <div className="text-center md:text-left order-2 md:order-1">
-                
                 <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-stone-100">
-                    Hello, I'm <br/> {/* "I am" yerine "I'm" daha doğaldır */}
+                    Hello, I'm <br/>
                     <span className="text-[#E07A5F]">Ahmet Efe Gençel</span>
                 </h1>
                 
@@ -104,8 +106,6 @@ const Portfolio = () => {
                     <span className="text-stone-300 font-medium"> procedural generation</span>.
                 </p>
 
-                {/* --- DÜZELTME 1: SOSYAL LİNKLER GERİ EKLENDİ --- */}
-                {/* Lütfen href kısımlarına kendi gerçek linklerini yapıştır */}
                 <div className="flex items-center justify-center md:justify-start gap-4 mb-10">
                     <a href="https://github.com/ProGencel" target="_blank" rel="noopener noreferrer" className="p-3 bg-stone-800 rounded-full hover:bg-stone-700 hover:text-white transition-all border border-stone-700 group">
                         <Github size={24} className="group-hover:scale-110 transition-transform"/>
@@ -121,7 +121,6 @@ const Portfolio = () => {
                     </a>
                 </div>
 
-                {/* --- TECH STACK --- */}
                 <div className="pt-8 border-t border-stone-800">
                     <p className="text-sm font-semibold text-stone-500 uppercase tracking-wider mb-4">
                         Tech Stack
@@ -139,7 +138,6 @@ const Portfolio = () => {
                 </div>
             </div>
 
-            {/* SAĞ: Profil Fotoğrafı */}
             <div className="order-1 md:order-2 flex justify-center relative">
                 <div className="relative w-64 h-64 md:w-80 md:h-80 group">
                     <div className="absolute inset-0 bg-gradient-to-tr from-[#E07A5F] to-purple-600 rounded-[2rem] rotate-6 opacity-50 group-hover:rotate-12 transition-transform duration-500 blur-xl"></div>
@@ -152,7 +150,6 @@ const Portfolio = () => {
             </div>
         </div>
 
-        {/* --- DÜZELTME 2: ÇALIŞAN SCROLL OKU --- */}
         <button 
             onClick={scrollToFirstProject}
             className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-stone-500 hover:text-[#E07A5F] transition-colors cursor-pointer"
@@ -164,7 +161,7 @@ const Portfolio = () => {
 
       {/* --- OYUN SECTIONLARI --- */}
       <main className="pb-24">
-        {games.map((game, index) => (
+        {reversedGames.map((game) => (
           <section 
             key={game.id} 
             id={game.id}
@@ -176,7 +173,6 @@ const Portfolio = () => {
             <div className="max-w-6xl w-full bg-stone-800 rounded-[2rem] shadow-2xl shadow-black/50 overflow-hidden border border-stone-700/50">
               <div className="grid lg:grid-cols-2 gap-0">
                 
-                {/* Sol: Görsel */}
                 <div className="relative h-64 lg:h-auto overflow-hidden group">
                   <img 
                     src={game.coverImage} 
@@ -186,7 +182,6 @@ const Portfolio = () => {
                   <div className="absolute inset-0 bg-stone-900/40 mix-blend-multiply"></div>
                 </div>
 
-                {/* Sağ: İçerik */}
                 <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-6">
                     <span className="px-3 py-1 bg-stone-700 text-stone-200 text-xs font-bold uppercase tracking-wider rounded-lg border border-stone-600">
@@ -211,7 +206,6 @@ const Portfolio = () => {
                   </div>
 
                   <div className="flex flex-wrap gap-4 mt-auto">
-                    {/* --- DÜZELTME 3: BOŞ BUTON DOLDURULDU --- */}
                     {game.links.itch && (
                       <a 
                         href={game.links.itch} 
@@ -243,13 +237,11 @@ const Portfolio = () => {
         ))}
       </main>
 
-      {/* --- BURADAN AŞAĞISINI EKLE (FOOTER) --- */}
+      {/* --- FOOTER --- */}
       <footer className="bg-stone-900 border-t border-stone-800 py-12 text-center relative overflow-hidden">
-        {/* Dekoratif Hafif Işık */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#E07A5F]/5 rounded-full blur-[80px]"></div>
         
         <div className="relative z-10 px-4">
-            {/* Kapanış Mesajı: İş arama değil, teşekkür mesajı */}
             <h3 className="text-2xl font-bold text-stone-200 mb-4">
                 Thanks for dropping by.
             </h3>
@@ -258,7 +250,6 @@ const Portfolio = () => {
                 Always learning, always creating. Feel free to reach out if you want to talk about game mechanics or dev.
             </p>
             
-            {/* İletişim Butonu: "Say Hello" (Çok daha cool durur) */}
             <a 
                 href="mailto:ahmetefegencel@gmail.com" 
                 className="inline-flex items-center gap-2 px-6 py-3 bg-stone-800 hover:bg-[#E07A5F] text-stone-300 hover:text-white rounded-xl transition-all border border-stone-700 hover:border-[#E07A5F]"
@@ -267,14 +258,11 @@ const Portfolio = () => {
                 Say Hello
             </a>
 
-            {/* Telif Hakkı */}
             <div className="mt-12 text-stone-600 text-sm">
                 &copy; {new Date().getFullYear()} Ahmet Efe Gençel. Built with React & Tailwind.
             </div>
         </div>
       </footer>
-      {/* --- FOOTER BİTİŞİ --- */}
-
     </div>
   );
 };
