@@ -1,6 +1,7 @@
 import flappyImg from './assets/images/FlappyDog.png'
 import recImg from './assets/images/RectangleMachine.png'
 import potatoImg from './assets/images/PotatoChaos.png'
+import maskImg from './assets/images/ElementsOfMasks.png'
 
 export const games = [
   {
@@ -40,6 +41,19 @@ export const games = [
     links: {
       itch: "",
       github: "https://github.com/ProGencel/Rectangle-Machine"
+    }
+  },
+  {
+    id: "game4",
+    title: "Masks of Elements",
+    shortDesc: "This game was developed with libGDX during Global Game Jam 2026. The theme was “Mask”. The player must choose the correct combination of six masks and complete the parkour within 15 seconds.",
+    coverImage: maskImg,
+    platform: "PC",
+    techStack: ["Java", "libGDX"],
+    themeColor: "from-stone-50 to-purple-500/10",
+    links: {
+      itch: "https://progencel.itch.io/masks-of-elements",
+      github: "https://github.com/ProGencel/MaskGameJam"
     }
   },
 ];
