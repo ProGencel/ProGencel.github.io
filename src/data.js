@@ -2,6 +2,7 @@ import flappyImg from './assets/images/FlappyDog.png'
 import recImg from './assets/images/RectangleMachine.png'
 import potatoImg from './assets/images/PotatoChaos.png'
 import maskImg from './assets/images/ElementsOfMasks.png'
+import eventPng from './assets/images/EventApp.png'
 
 export const games = [
   {
@@ -56,4 +57,16 @@ export const games = [
       github: "https://github.com/ProGencel/MaskGameJam"
     }
   },
+    {
+        id: "project5",
+        title: "Event Sharing Platform",
+        shortDesc: "A web application that allows users to share and discover events. Users can create, edit, and delete events, as well as view event details and join to events.",
+        coverImage: eventPng,
+        platform: "Web",
+        techStack: ["Spring Boot", "Angular", "PostgresSQL", "Hibernate"],
+        themeColor: "from-stone-50",
+        links: {
+            github: "https://github.com/ProGencel/Etkinlik-Paylasma-Uygulamasi"
+        }
+    },
 ];
