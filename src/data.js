@@ -3,6 +3,7 @@ import recImg from './assets/images/RectangleMachine.png'
 import potatoImg from './assets/images/PotatoChaos.png'
 import maskImg from './assets/images/ElementsOfMasks.png'
 import eventPng from './assets/images/EventApp.png'
+import SoupPng from './assets/images/Soup.png'
 
 export const games = [
   {
@@ -69,4 +70,17 @@ export const games = [
             github: "https://github.com/ProGencel/Etkinlik-Paylasma-Uygulamasi"
         }
     },
+    {
+    id: "game5",
+    title: "Soup Game",
+    shortDesc: "This game was created to learn inventory, contact, and event-handling systems. It is also the first game where I created most of the pixel art.",
+    coverImage: SoupPng,
+    platform: "PC",
+    techStack: ["Java","libGDX","Scene2D","Box2d","Aseprite"],
+    themeColor: "from-stone-50 to-purple-500/10",
+    links: {
+      itch: "https://progencel.itch.io/soup-game",
+      github: "https://github.com/ProGencel/Soup-Game"
+    }
+  }
 ];

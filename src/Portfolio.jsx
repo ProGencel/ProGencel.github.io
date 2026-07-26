@@ -53,7 +53,7 @@ const Portfolio = () => {
 
   const skills = [
     "Java", "Swing", "LibGDX", "Box2D", 
-    "Git", "Github", "Scene2D", "OOP",
+    "Git", "Github", "Scene2D", "OOP","Aseprite"
   ];
 
   return (
