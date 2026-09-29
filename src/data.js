@@ -4,6 +4,7 @@ import potatoImg from './assets/images/PotatoChaos.png'
 import maskImg from './assets/images/ElementsOfMasks.png'
 import eventPng from './assets/images/EventApp.png'
 import SoupPng from './assets/images/Soup.png'
+import TimerPng from './assets/images/KitsWikiTimer.png'
 
 export const games = [
   {
@@ -81,6 +82,18 @@ export const games = [
     links: {
       itch: "https://progencel.itch.io/soup-game",
       github: "https://github.com/ProGencel/Soup-Game"
+    }
+  },
+    {
+    id: "project6",
+    title: "KitsWiki Timer",
+    shortDesc: "Developed for personel usage. You can create projects and set timers for each project so you can see your progress on each project. And I use my own tool for first time in this project.",
+    coverImage: TimerPng,
+    platform: "PC, Android",
+    techStack: ["Java","libGDX","Scene2D","Aseprite"],
+    themeColor: "from-stone-50 to-purple-500/10",
+    links: {
+      itch: "https://progencel.itch.io/kitswikitimer",
     }
   }
 ];
