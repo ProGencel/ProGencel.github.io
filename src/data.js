@@ -5,6 +5,7 @@ import maskImg from './assets/images/ElementsOfMasks.png'
 import eventPng from './assets/images/EventApp.png'
 import SoupPng from './assets/images/Soup.png'
 import TimerPng from './assets/images/KitsWikiTimer.png'
+import TimeSheet from './assets/images/timesheet.png'
 
 export const games = [
   {
@@ -16,7 +17,6 @@ export const games = [
     techStack: ["Java", "Swing"],
     themeColor: "from-stone-50 to-[#E07A5F]/10",
     links: {
-      itch: "",
       github: "https://github.com/ProGencel/Rectangle-Machine"
     }
   },
@@ -84,8 +84,20 @@ export const games = [
       github: "https://github.com/ProGencel/Soup-Game"
     }
   },
-    {
+  {
     id: "project6",
+    title: "TimeSheet App",
+    shortDesc: "Developed for summet internship. This project is designed to help companies track their employees.",
+    coverImage: TimeSheet,
+    platform: "PC",
+    techStack: ["Spring Boot","Angular","Postman","PostgreSQL","Hibernate"],
+    themeColor: "from-stone-50 to-purple-500/10",
+    links: {
+      github: "https://github.com/ProGencel/TimeSheetApp",
+    }
+  },
+    {
+    id: "project7",
     title: "KitsWiki Timer",
     shortDesc: "Developed for personel usage. You can create projects and set timers for each project so you can see your progress on each project. And I use my own tool for first time in this project.",
     coverImage: TimerPng,
